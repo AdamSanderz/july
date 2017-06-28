@@ -15,8 +15,8 @@ export class TitlesProvider {
 
     loadList() {
         return new Promise(resolve => {
-            this.http.get('../assets/json/wikievent.json')
-                // this.http.get('http://www.wikievent.net/index.php/api/Wikievent/events/page/0/rows/10')
+            // this.http.get('../assets/json/wikievent.json')
+                this.http.get('http://www.wikievent.net/index.php/api/Wikievent/events/page/0/rows/10')
                 .map(res => res.json())
                 .subscribe(results => {
                     this.data = results.events;

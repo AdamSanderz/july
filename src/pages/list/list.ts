@@ -58,7 +58,7 @@ export class ListPage {
         var val = ev.target.value;
 
         // Reset items back to all of the items
-        if (val && val.trim() == '') {
+        if (val.trim() == '') {
             this.loadAllTheList();
 
         }
