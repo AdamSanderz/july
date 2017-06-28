@@ -9,18 +9,20 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content has-header="true" has-footer="true">
 
-    <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()"></ion-searchbar>
-
-    <div *ngIf="searching" class="spinner-container">
-        <ion-spinner></ion-spinner>
-    </div>
-
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
     <ion-list>
-        <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+
+
+        <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)" type="item-text-wrap">
             {{item.title}}
         </button>
     </ion-list>
+    <!--    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+-->
+
 
 </ion-content>

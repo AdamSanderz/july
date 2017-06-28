@@ -14,19 +14,80 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class BasicPage {
 
-	items;
+  items;
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-  	this.initializeItems();
+    this.initializeItems();
+
+    for (let i = 0; i < 30; i++) {
+      this.items.push(this.items.length);
+    }
+    
   }
+
+  doInfinite(infiniteScroll) {
+    console.log('Begin async operation');
+
+    setTimeout(() => {
+      for (let i = 0; i < 30; i++) {
+        this.items.push(this.items.length);
+      }
+
+      console.log('Async operation has ended');
+      infiniteScroll.complete();
+    }, 500);
+  }
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad BasicPage');
   }
 
-    initializeItems() {
+  initializeItems() {
     this.items = [
+      'ایران',
+      'تهران',
+      'یزد',
+      'شیراز',
+      'تبریز',
+      'آلمان',
+      'ایران',
+      'تهران',
+      'یزد',
+      'شیراز',
+      'تبریز',
+      'آلمان',
+      'ایران',
+      'تهران',
+      'یزد',
+      'شیراز',
+      'تبریز',
+      'آلمان',
+      'ایران',
+      'تهران',
+      'یزد',
+      'شیراز',
+      'تبریز',
+      'آلمان',
+      'ایران',
+      'تهران',
+      'یزد',
+      'شیراز',
+      'تبریز',
+      'آلمان',
+      'ایران',
+      'تهران',
+      'یزد',
+      'شیراز',
+      'تبریز',
+      'آلمان',
+      'ایران',
+      'تهران',
+      'یزد',
+      'شیراز',
+      'تبریز',
+      'آلمان',
       'ایران',
       'تهران',
       'یزد',
@@ -36,7 +97,7 @@ export class BasicPage {
     ];
   }
 
-    getItems(ev) {
+  getItems(ev) {
     // Reset items back to all of the items
     this.initializeItems();
 
