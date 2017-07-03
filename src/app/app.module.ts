@@ -5,9 +5,13 @@ import { MyApp } from './app.component';
 import { HttpModule } from '@angular/http';
 
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
+// import { HelloWorldPage } from '../pages/hello-world/hello-world';
 import { ItemDetailsPage } from '../pages/item-details/item-details';
 import { ListPage } from '../pages/list/list';
 import { BasicPage } from '../pages/basic/basic';
+import { MechanicsPage } from '../pages/mechanics/mechanics';
+import { ContactUsPage } from '../pages/contact-us/contact-us';
+import { AboutPage } from '../pages/about/about';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -16,6 +20,7 @@ import { TitlesProvider } from '../providers/titles/titles';
 import { StoresProvider } from '../providers/stores/stores';
 import { StoresListPage } from "../pages/stores-list/stores-list";
 import { StoresListDetailsPage } from "../pages/stores-list-details/stores-list-details";
+import { WheelSelector } from '@ionic-native/wheel-selector';
 
 @NgModule({
     declarations: [
@@ -25,7 +30,10 @@ import { StoresListDetailsPage } from "../pages/stores-list-details/stores-list-
         ListPage,
         BasicPage,
         StoresListPage,
-        StoresListDetailsPage
+        StoresListDetailsPage,
+        MechanicsPage,
+        ContactUsPage,
+        AboutPage,
     ],
     imports: [
         BrowserModule,
@@ -36,11 +44,15 @@ import { StoresListDetailsPage } from "../pages/stores-list-details/stores-list-
     entryComponents: [
         MyApp,
         HelloIonicPage,
+        // HelloWorldPage,
         ItemDetailsPage,
         ListPage,
         BasicPage,
         StoresListPage,
-        StoresListDetailsPage
+        StoresListDetailsPage,
+        MechanicsPage,
+        ContactUsPage,
+        AboutPage,
     ],
     providers: [
         StatusBar,
@@ -49,6 +61,7 @@ import { StoresListDetailsPage } from "../pages/stores-list-details/stores-list-
         HelloServiceProvider,
         TitlesProvider,
         StoresProvider,
+        WheelSelector
     ]
 })
 export class AppModule {

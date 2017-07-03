@@ -22,9 +22,10 @@ export class ListPage {
         /*for (let i = 0; i < 30; i++) {
             this.items.push(this.items.length);
         }*/
+
     }
 
-    /*    doInfinite(infiniteScroll) {
+        /*doInfinite(infiniteScroll) {
             console.log('Begin async operation');
     
             setTimeout(() => {

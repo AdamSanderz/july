@@ -12,17 +12,37 @@
 <ion-content has-header="true" has-footer="true">
 
     <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
-    <ion-list>
+    <!--<ion-list>-->
+    <ion-card *ngFor="let item of items" (click)="itemTapped($event, item)" type="item-text-wrap">
+        <ion-card-content dir="rtl">
 
+            <img src="http://www.wikievent.net/{{item.cover}}">
+            <ion-card-title dir="rtl">
+                {{item.title}}
+            </ion-card-title>
+            <p class="card-subtitle">
+                {{item.fulltext | slice:0:80}} ...
+            </p>
 
-        <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)" type="item-text-wrap">
+        </ion-card-content>
+
+    </ion-card>
+
+    <!--</ion-list>-->
+    <!--    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)" type="item-text-wrap">
             {{item.title}}
         </button>
-    </ion-list>
-    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+-->
+    <!--<td-cards>
+        <td-card *ngFor="let item of items" (click)="itemTapped($event, item)" type="item-text-wrap">
+            {{item.title}}
+
+        </td-card>
+    </td-cards>-->
+    <!--    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
         <ion-infinite-scroll-content></ion-infinite-scroll-content>
     </ion-infinite-scroll>
-
+-->
 
 
 </ion-content>

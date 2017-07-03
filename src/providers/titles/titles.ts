@@ -21,7 +21,7 @@ export class TitlesProvider {
                 .subscribe(results => {
                     this.data = results.events;
                     resolve(this.data);
-
+                    // console.log(results);
                     for (var key in this.data) {
                         if (this.data.hasOwnProperty(key)) {
                             var element = this.data[key]
@@ -30,8 +30,8 @@ export class TitlesProvider {
                         }
                     }
                     element = this.data;
-                    // console.log(element)
-                    // console.log(this.data)
+                    console.log(element)
+                    console.log(this.data)
                 })
         });
 

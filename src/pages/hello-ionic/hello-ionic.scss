@@ -1,3 +1,35 @@
 page-hello-ionic {
+  body {
+    margin: 0;
+  }
+
+
+  ion-icon {
+    font-size: 32px;
+  }
+  #img {
+    text-align: center;
+  }
+
+  #rightalign {
+    text-align: center;
+  }
+
+  ion-col > div {
+    background: #eee;
+    border: solid #9e9e9e 1px;
+  }
+
+
+
+/*  @font-face {
+    font-family: Sahel;
+    src: url('../../assets/fonts/Sahel.eot');
+    src: url('../../assets/fonts/Sahel.eot?#iefix') format('embedded-opentype'),
+    url('../../assets/fonts/Sahel.woff') format('woff'),
+    url('../../assets/fonts/Sahel.ttf') format('truetype');
+    font-weight: normal;
+  }*/
+
 
 }

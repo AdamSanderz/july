@@ -23,6 +23,7 @@ export class StoresListPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public stores: StoresProvider) {
     this.loadStores();
   }
+  
 
 
 

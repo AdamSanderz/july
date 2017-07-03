@@ -1,4 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
+// import { WheelSelector } from '@ionic-native/wheel-selector';
 
 import { Platform, MenuController, Nav } from 'ionic-angular';
 
@@ -6,6 +7,9 @@ import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 import { ListPage } from '../pages/list/list';
 import { BasicPage } from '../pages/basic/basic';
 import { StoresListPage } from '../pages/stores-list/stores-list';
+import { MechanicsPage } from '../pages/mechanics/mechanics';
+import { ContactUsPage } from '../pages/contact-us/contact-us';
+import { AboutPage } from '../pages/about/about';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -34,7 +38,10 @@ export class MyApp {
       { title: 'Hello Ionic', component: HelloIonicPage },
       { title: 'My First List', component: ListPage },
       { title: 'Basic Page', component: BasicPage },
-      { title: 'Stores List', component: StoresListPage }
+      { title: 'Stores List', component: StoresListPage },
+      { title: 'Mechanics List', component: MechanicsPage },
+      { title: 'Contact Us', component: ContactUsPage },
+      { title: 'About', component: AboutPage },
     ];
   }
 

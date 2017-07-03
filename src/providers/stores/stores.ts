@@ -12,13 +12,13 @@ import 'rxjs/add/operator/map';
 export class StoresProvider {
 
     data: {};
+    provinces;
+
+    constructor(public http: Http) {
+        console.log('Hello StoresProvider Provider');
 
 
-  constructor(public http: Http) {
-    console.log('Hello StoresProvider Provider');
-
-
-  }
+    }
 
 
     load() {
@@ -36,6 +36,19 @@ export class StoresProvider {
     }
 
 
-    
+    loadProvincesAndCitiesFromJSON() {
+
+        return new Promise(resolve => {
+            this.http.get('../../assets/json/province.json')
+                .map(res => res.json())
+                .subscribe(results => {
+                    this.provinces = results;
+                    resolve(this.provinces);
+                });
+        });
+    }
+
+
+
 
 }
