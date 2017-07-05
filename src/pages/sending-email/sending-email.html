@@ -1,0 +1,47 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>
+			Sending Email
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+
+
+
+<!-- <ion-content padding="true">
+	<ion-card>
+		<h1>You have Contacted Us! How Nice!</h1>
+	</ion-card>
+	<ion-list>
+		<ion-item>
+			<ion-label dir="rtl" color="primary" floating>عنوان</ion-label>
+			<ion-input dir="rtl" type="text"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label dir="rtl" color="primary" floating>ایمیل آدرس</ion-label>
+			<ion-input type="email"></ion-input>
+		</ion-item>
+	</ion-list>
+	<ion-label dir="rtl" color="primary" floating>مسیج</ion-label>
+	<ion-textarea dir="rtl"  [(ngModel)]="noteContent"></ion-textarea>
+
+	<button type="submit" (click)="sendEmail()" ion-button>ارسال</button>
+	<a href="tel:+989389251152"> Call</a>
+	{{clicked}}
+</ion-content> -->
+
+
+<ion-content padding>
+  The world is your oyster.
+  <p>
+    If you get lost, the <a href="https://ionicframework.com/docs/native/">docs</a> will be your guide.
+  </p>
+   <button ion-button item-right (click)="postRequest()">Send</button>
+   <div>
+   	<p>data: {{data}}</p>
+   	<p>error: {{error}}</p>
+   </div>
+</ion-content>

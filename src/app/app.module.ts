@@ -21,6 +21,10 @@ import { StoresProvider } from '../providers/stores/stores';
 import { StoresListPage } from "../pages/stores-list/stores-list";
 import { StoresListDetailsPage } from "../pages/stores-list-details/stores-list-details";
 import { WheelSelector } from '@ionic-native/wheel-selector';
+import { EmailComposer } from '@ionic-native/email-composer';
+import { SendingEmailProvider } from '../providers/sending-email/sending-email';
+import { SendingEmailPage } from '../pages/sending-email/sending-email';
+
 
 @NgModule({
     declarations: [
@@ -34,6 +38,7 @@ import { WheelSelector } from '@ionic-native/wheel-selector';
         MechanicsPage,
         ContactUsPage,
         AboutPage,
+        SendingEmailPage
     ],
     imports: [
         BrowserModule,
@@ -53,6 +58,7 @@ import { WheelSelector } from '@ionic-native/wheel-selector';
         MechanicsPage,
         ContactUsPage,
         AboutPage,
+        SendingEmailPage
     ],
     providers: [
         StatusBar,
@@ -61,7 +67,9 @@ import { WheelSelector } from '@ionic-native/wheel-selector';
         HelloServiceProvider,
         TitlesProvider,
         StoresProvider,
-        WheelSelector
+        WheelSelector,
+        EmailComposer,
+    SendingEmailProvider
     ]
 })
 export class AppModule {

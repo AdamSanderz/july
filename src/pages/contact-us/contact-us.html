@@ -1,18 +1,33 @@
 <ion-header>
     <ion-navbar>
         <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-        <ion-title>
-            Contact Us
-        </ion-title>
-    </ion-navbar>
+          <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        Contact Us
+    </ion-title>
+</ion-navbar>
 </ion-header>
 
 
 
-<ion-content padding>
+<ion-content padding="true">
     <ion-card>
         <h1>You have Contacted Us! How Nice!</h1>
     </ion-card>
+    <ion-list>
+        <ion-item>
+            <ion-label dir="rtl" color="primary" floating>عنوان</ion-label>
+            <ion-input dir="rtl" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label dir="rtl" color="primary" floating>ایمیل آدرس</ion-label>
+            <ion-input type="email"></ion-input>
+        </ion-item>
+    </ion-list>
+    <ion-textarea dir="rtl"  [(ngModel)]="noteContent"></ion-textarea>
+
+    <button (click)="sendEmail()" ion-button>ارسال</button>
+    <a href="tel:+989389251152"> Call</a>
+    {{clicked}}
 </ion-content>

@@ -10,6 +10,7 @@ import { StoresListPage } from '../pages/stores-list/stores-list';
 import { MechanicsPage } from '../pages/mechanics/mechanics';
 import { ContactUsPage } from '../pages/contact-us/contact-us';
 import { AboutPage } from '../pages/about/about';
+import { SendingEmailPage } from '../pages/sending-email/sending-email';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -42,6 +43,7 @@ export class MyApp {
       { title: 'Mechanics List', component: MechanicsPage },
       { title: 'Contact Us', component: ContactUsPage },
       { title: 'About', component: AboutPage },
+      { title: 'Sending Email', component: SendingEmailPage },
     ];
   }
 
